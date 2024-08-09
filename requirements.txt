@@ -1,4 +1,4 @@
-pip install numpy
-pip install streamlit
-pip install ultranalitcs
-pip install opencv-python
+numpy
+streamlit
+ultralytics
+opencv-python
