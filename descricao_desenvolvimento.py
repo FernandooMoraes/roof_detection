@@ -17,7 +17,7 @@ def show_description_page():
    
     # Adicionando uma imagem de boas-vindas
 
-    image_path = "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\code_artigo\\telhado\\examples.jpeg"
+    image_path = "https:\\github.com\\FernandooMoraes\\roof_detection\\tree\\main\\examples.jpeg"
     st.image(image_path, caption="a) Extra tile on the roof, b) Gutter integrity (Oxidation), c) Open trapdoor.", use_column_width=True)
 
     st.write('The images below show examples of test set classifications.')
