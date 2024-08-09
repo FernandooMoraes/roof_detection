@@ -5,7 +5,7 @@ from ultralytics import YOLO
 
 def show_model_page():
     # Replace the relative path to your weight file
-    model_path = 'C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\code_artigo\\best.pt'
+    model_path = 'https:\\github.com\\FernandooMoraes\\roof_detection\\tree\\main\\best.pt'
 
     st.title('Application to identify problems on building roofs')
 
