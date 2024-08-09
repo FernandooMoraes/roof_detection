@@ -22,13 +22,13 @@ def show_description_page():
 
     st.write('The images below show examples of test set classifications.')
     
-    image_path1 = "https://github.com/FernandooMoraes/roof_detection/tree/main/extra.jpeg"
+    image_path1 = "extra.jpeg"
     st.image(image_path1, caption="Test set classification for extra tiles.", use_column_width=True)
 
-    image_path2 = "https://github.com/FernandooMoraes/roof_detection/tree/main/rufos.jpeg"
+    image_path2 = "rufos.jpeg"
     st.image(image_path2, caption="Test set classification for oxidation.", use_column_width=True)
 
-    image_path3 = "https://github.com/FernandooMoraes/roof_detection/tree/main/open.jpeg"
+    image_path3 = "open.jpeg"
     st.image(image_path3, caption="Test set classification for open skylight.", use_column_width=True)
 
     # Adicionando uma imagem de exemplo
