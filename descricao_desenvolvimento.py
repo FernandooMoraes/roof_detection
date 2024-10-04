@@ -3,7 +3,7 @@ import streamlit as st
 def show_description_page():
     st.title('Development Description')
 
-    st.write('This application was developed with the aim of creating a YOLOv8 model for detecting damage in residential roofs. The images used for training and testing were collected through commercial drones.')
+    st.write('This application was developed with the aim of creating a YOLO11 model for detecting damage in residential roofs. The images used for training and testing were collected through commercial drones.')
     # Descrição do que o modelo identifica
 
     st.header('Main Features:')
