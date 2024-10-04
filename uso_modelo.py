@@ -2,32 +2,33 @@ import streamlit as st
 from PIL import Image
 from ultralytics import YOLO
 import cv2
+import numpy as np
 
 
 def show_model_page():
-    # Replace the relative path to your weight file
-    model_path = 'https://github.com/FernandooMoraes/roof_detection/blob/main/best.pt'
+    # Substitua pelo caminho correto do seu arquivo de modelo
+    model_path = 'https://github.com/FernandooMoraes/roof_detection/raw/main/best.pt'
 
     st.title('Application to identify problems on building roofs')
 
-    # Creating sidebar
+    # Criando a barra lateral
     with st.sidebar:
-        st.header("Image")     # Adding header to sidebar
-        # Adding file uploader to sidebar for selecting images
-        source_img = st.file_uploader("Choose an image...", type=("jpg", "jpeg", "png", 'bmp', 'webp'))
+        st.header("Image")  # Adicionando cabeçalho à barra lateral
+        # Adicionando o uploader de arquivo à barra lateral para selecionar imagens
+        source_img = st.file_uploader("Choose an image...", type=("jpg", "jpeg", "png", "bmp", "webp"))
 
-    # Creating two columns on the main page
+    # Criando duas colunas na página principal
     col1, col2 = st.columns(2)
 
-    # Adding image to the first column if image is uploaded
+    # Adicionando a imagem à primeira coluna se a imagem for enviada
     if source_img:
-        # Opening the uploaded image
+        # Abrindo a imagem enviada
         uploaded_image = Image.open(source_img)
-        # Adding the uploaded image to the page with a caption
+        # Adicionando a imagem enviada à página com uma legenda
         with col1:
             st.image(uploaded_image, caption="Uploaded Image", use_column_width=True)
 
-        # Load model
+        # Carregando o modelo
         try:
             model = YOLO(model_path)
         except Exception as ex:
@@ -37,7 +38,12 @@ def show_model_page():
 
         if model:
             if st.sidebar.button('Detect Objects'):
-                res = model.predict(uploaded_image, conf=0.5, iou=0.5)
+                # Convertendo a imagem para o formato adequado
+                image_cv = np.array(uploaded_image)
+                image_cv = cv2.cvtColor(image_cv, cv2.COLOR_RGB2BGR)
+
+                # Fazendo a predição
+                res = model.predict(image_cv, conf=0.5, iou=0.5)
                 boxes = res[0].boxes
                 res_plotted = res[0].plot()[:, :, ::-1]
                 with col2:
