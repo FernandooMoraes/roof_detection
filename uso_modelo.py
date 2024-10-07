@@ -1,11 +1,11 @@
 import streamlit as st
 from PIL import Image
 from ultralytics import YOLO
-import cv2
 import numpy as np
 
 
 def show_model_page():
+import cv2
     # Substitua pelo caminho correto do seu arquivo de modelo
     model_path = 'https://github.com/FernandooMoraes/roof_detection/raw/main/best.pt'
 
