@@ -4,7 +4,6 @@ from ultralytics import YOLO
 import numpy as np
 import cv2
 def show_model_page():
-
     # Substitua pelo caminho correto do seu arquivo de modelo
     model_path = 'https://github.com/FernandooMoraes/roof_detection/raw/main/best.pt'
 
