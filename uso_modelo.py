@@ -3,7 +3,6 @@ from PIL import Image
 from ultralytics import YOLO
 import numpy as np
 import cv2
-
 def show_model_page():
 
     # Substitua pelo caminho correto do seu arquivo de modelo
