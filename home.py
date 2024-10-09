@@ -3,7 +3,7 @@ from PIL import Image
 
 
 def show_home_page():
-    st.title('Welcome to the Object Detection Application using YOLOv8')
+    st.title('Welcome to the Object Detection Application using YOLO11')
 
     st.write("""
     This application was developed to identify issues in building roofs using YOLOv8 object detection technology. 
