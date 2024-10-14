@@ -6,7 +6,7 @@ def show_home_page():
     st.title('Welcome to the Object Detection Application using YOLO11')
 
     st.write("""
-    This application was developed to identify issues in building roofs using YOLOv8 object detection technology. 
+    This application was developed to identify issues in building roofs using YOLO11 object detection technology. 
     It enables automatic detection of damage and irregularities in residential roofs, helping with maintenance and prevention of larger problems.
      """)
 
@@ -15,7 +15,7 @@ def show_home_page():
     st.header('How to Navigate:')
     st.write("""
     - **Home:** You're here! This page provides an overview of the application.
-    - **Model Usage:** Upload a roof image and use our YOLOv8 model to detect potential issues.
+    - **Model Usage:** Upload a roof image and use our YOLO11 model to detect potential issues.
     - **Development Description:** Learn more about the methodology used to develop this application in detail.
     """)
 
