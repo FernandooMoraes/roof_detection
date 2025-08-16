@@ -2,7 +2,7 @@ import streamlit as st
 
 # Configuração da página
 st.set_page_config(
-    page_title="Object Detection using YOLO12",  # Título da página
+    page_title="Object Detection using YOLOv12",  # Título da página
     page_icon="🤖",     # Ícone da página
     layout="wide",      # Layout
     initial_sidebar_state="expanded"    # Barra lateral expandida por padrão
@@ -22,4 +22,5 @@ elif page == "Model":
 else:
     from descricao_desenvolvimento import show_description_page
     show_description_page()
+
 
