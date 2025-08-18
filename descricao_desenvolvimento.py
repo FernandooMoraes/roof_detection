@@ -23,13 +23,13 @@ def show_description_page():
     st.write('The images below show examples of test set classifications.')
     
     image_path1 = "extra.jpeg"
-    st.image(image_path1, caption="Test set classification for extra tiles.", use_column_width=True)
+    st.image(image_path1, caption="Test set classification for extra tiles.",  use_container_width=True)
 
     image_path2 = "rufos.jpeg"
-    st.image(image_path2, caption="Test set classification for oxidation.", use_column_width=True)
+    st.image(image_path2, caption="Test set classification for oxidation.",  use_container_width=True)
 
     image_path3 = "open.jpeg"
-    st.image(image_path3, caption="Test set classification for open skylight.", use_column_width=True)
+    st.image(image_path3, caption="Test set classification for open skylight.",  use_container_width=True)
 
     # Adicionando uma imagem de exemplo
     #image_path = "path/to/your/image.jpg"
@@ -45,4 +45,5 @@ def show_description_page():
     #st.write('## O artigo dessa pesquisa pode ser encontrado em:')
     # Descrição do que o modelo identifica
     #st.write('## Autores:')
+
 
