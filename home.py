@@ -3,10 +3,10 @@ from PIL import Image
 
 
 def show_home_page():
-    st.title('Welcome to the Object Detection Application using YOLO11')
+    st.title('Welcome to the Object Detection Application using YOLOv12')
 
     st.write("""
-    This application was developed to identify issues in building roofs using YOLO11 object detection technology. 
+    This application was developed to identify issues in building roofs using YOLOv12 object detection technology. 
     It enables automatic detection of damage and irregularities in residential roofs, helping with maintenance and prevention of larger problems.
      """)
 
@@ -26,3 +26,4 @@ def show_home_page():
     """)
 
     st.write('We hope you have a great experience using our application!')
+
