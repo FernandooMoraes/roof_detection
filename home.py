@@ -15,7 +15,7 @@ def show_home_page():
     st.header('How to Navigate:')
     st.write("""
     - **Home:** You're here! This page provides an overview of the application.
-    - **Model Usage:** Upload a roof image and use our YOLO11 model to detect potential issues.
+    - **Model Usage:** Upload a roof image and use our YOLOv12 model to detect potential issues.
     - **Development Description:** Learn more about the methodology used to develop this application in detail.
     """)
 
@@ -26,4 +26,5 @@ def show_home_page():
     """)
 
     st.write('We hope you have a great experience using our application!')
+
 
