@@ -24,7 +24,7 @@ def show_model_page():
         uploaded_image = Image.open(source_img)
         # Adicionando a imagem enviada à página com uma legenda
         with col1:
-            st.image(uploaded_image, caption="Uploaded Image", use_column_width=True)
+            st.image(uploaded_image, caption="Uploaded Image", use_container_width=True)
 
         # Carregando o modelo
         try:
@@ -45,7 +45,7 @@ def show_model_page():
                 boxes = res[0].boxes
                 res_plotted = res[0].plot()[:, :, ::-1]
                 with col2:
-                    st.image(res_plotted, caption='Detected Image', use_column_width=True)
+                    st.image(res_plotted, caption='Detected Image', use_container_width=True)
                     try:
                         with st.expander("Detection Results"):
                             for box in boxes:
@@ -54,4 +54,5 @@ def show_model_page():
                         st.error("Error displaying detection results.")
     else:
         st.warning("Please upload an image to proceed with object detection.")
+
 
