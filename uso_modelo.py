@@ -5,7 +5,7 @@ import numpy as np
 import cv2
 def show_model_page():
     # Substitua pelo caminho correto do seu arquivo de modelo
-    model_path = 'https://github.com/FernandooMoraes/roof_detection/raw/main/best.pt'
+    model_path = 'https://github.com/FernandooMoraes/roof_detection/raw/main/yolo12.pt'
 
     st.title('Application to identify problems on building roofs')
 
@@ -54,3 +54,4 @@ def show_model_page():
                         st.error("Error displaying detection results.")
     else:
         st.warning("Please upload an image to proceed with object detection.")
+
